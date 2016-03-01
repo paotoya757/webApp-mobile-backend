@@ -1,0 +1,48 @@
+{
+  "name": "Oferta",
+  "plural": "ofertas",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "precio": {
+      "type": "number",
+      "required": true
+    },
+    "fecha_inicio": {
+      "type": "date",
+      "required": true
+    },
+    "fecha_final": {
+      "type": "date"
+    },
+    "tickets_disponibles": {
+      "type": "number",
+      "required": true
+    },
+    "abierta": {
+      "type": "boolean",
+      "required": true
+    },
+    "numInteresados": {
+      "type": "number",
+      "required": true
+    },
+    "flyer": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "categoria": {
+      "type": "belongsTo",
+      "model": "Categoria",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

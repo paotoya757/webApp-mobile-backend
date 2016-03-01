@@ -1,0 +1,35 @@
+{
+  "name": "Cliente",
+  "plural": "clientes",
+  "base": "User",
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "no_id": {
+      "type": "number",
+      "required": true
+    },
+    "nombre": {
+      "type": "string",
+      "required": true
+    },
+    "edad": {
+      "type": "number",
+      "required": true
+    },
+    "tokenTC": {
+      "type": "string",
+      "required": true
+    },
+    "genero": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
