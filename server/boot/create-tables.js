@@ -3,13 +3,1122 @@ module.exports = function(app) {
 	var ds = app.dataSources.mypgsql;
 	  ds.automigrate('Categoria', function(err) {
 		if (err) throw err;		 
+	  
+	  		var data =
+	  			[
+	  				{
+	  					"nombre":"SALUD"
+	  				},
+	  				{
+	  					"nombre":"DIVERSION"
+	  				},
+	  				{
+	  					"nombre":"ELECTRODOMESTICOS"
+	  				},
+	  				{
+	  					"nombre":"MERCADO"
+	  				},
+	  				{
+	  					"nombre":"RESTAURANTE"
+	  				}
+	  			]  
+	  		;
+	  		app.models.Categoria.create( data , function(){} );
+
 	  });
 
 	  ds.automigrate( 'Oferta' , function( err ) {
+
+	  		app.models.Oferta.create( 
+	  			[{
+  "precio": 92400,
+  "fecha_inicio": "2014-03-12",
+  "fecha_fin": "2015-05-16",
+  "tickets_disponibles": 98,
+  "abierta": false,
+  "numInteresados": 28,
+  "flyer": "Violet",
+  "categoriaId": 3
+}, {
+  "precio": 97811,
+  "fecha_inicio": "2014-09-22",
+  "fecha_fin": "2015-05-04",
+  "tickets_disponibles": 87,
+  "abierta": false,
+  "numInteresados": 2,
+  "flyer": "Blue",
+  "categoriaId": 3
+}, {
+  "precio": 27464,
+  "fecha_inicio": "2015-02-03",
+  "fecha_fin": "2015-12-29",
+  "tickets_disponibles": 64,
+  "abierta": true,
+  "numInteresados": 23,
+  "flyer": "Blue",
+  "categoriaId": 3
+}, {
+  "precio": 82094,
+  "fecha_inicio": "2014-08-12",
+  "fecha_fin": "2015-03-22",
+  "tickets_disponibles": 28,
+  "abierta": true,
+  "numInteresados": 8,
+  "flyer": "Purple",
+  "categoriaId": 5
+}, {
+  "precio": 64621,
+  "fecha_inicio": "2014-07-11",
+  "fecha_fin": "2015-11-16",
+  "tickets_disponibles": 91,
+  "abierta": true,
+  "numInteresados": 27,
+  "flyer": "Maroon",
+  "categoriaId": 3
+}, {
+  "precio": 65027,
+  "fecha_inicio": "2014-03-18",
+  "fecha_fin": "2015-09-29",
+  "tickets_disponibles": 85,
+  "abierta": true,
+  "numInteresados": 18,
+  "flyer": "Fuscia",
+  "categoriaId": 4
+}, {
+  "precio": 5445,
+  "fecha_inicio": "2014-08-22",
+  "fecha_fin": "2015-04-05",
+  "tickets_disponibles": 6,
+  "abierta": false,
+  "numInteresados": 9,
+  "flyer": "Puce",
+  "categoriaId": 4
+}, {
+  "precio": 71134,
+  "fecha_inicio": "2014-05-29",
+  "fecha_fin": "2015-12-05",
+  "tickets_disponibles": 31,
+  "abierta": false,
+  "numInteresados": 9,
+  "flyer": "Red",
+  "categoriaId": 1
+}, {
+  "precio": 48195,
+  "fecha_inicio": "2015-02-24",
+  "fecha_fin": "2015-04-01",
+  "tickets_disponibles": 43,
+  "abierta": true,
+  "numInteresados": 13,
+  "flyer": "Yellow",
+  "categoriaId": 5
+}, {
+  "precio": 16886,
+  "fecha_inicio": "2014-10-29",
+  "fecha_fin": "2015-10-02",
+  "tickets_disponibles": 97,
+  "abierta": true,
+  "numInteresados": 27,
+  "flyer": "Goldenrod",
+  "categoriaId": 5
+}, {
+  "precio": 92697,
+  "fecha_inicio": "2015-01-03",
+  "fecha_fin": "2015-06-17",
+  "tickets_disponibles": 51,
+  "abierta": true,
+  "numInteresados": 3,
+  "flyer": "Red",
+  "categoriaId": 5
+}, {
+  "precio": 30036,
+  "fecha_inicio": "2014-10-30",
+  "fecha_fin": "2015-08-30",
+  "tickets_disponibles": 42,
+  "abierta": true,
+  "numInteresados": 14,
+  "flyer": "Green",
+  "categoriaId": 3
+}, {
+  "precio": 17436,
+  "fecha_inicio": "2014-03-24",
+  "fecha_fin": "2015-12-22",
+  "tickets_disponibles": 56,
+  "abierta": false,
+  "numInteresados": 19,
+  "flyer": "Crimson",
+  "categoriaId": 4
+}, {
+  "precio": 90873,
+  "fecha_inicio": "2014-09-01",
+  "fecha_fin": "2015-10-10",
+  "tickets_disponibles": 36,
+  "abierta": true,
+  "numInteresados": 14,
+  "flyer": "Pink",
+  "categoriaId": 4
+}, {
+  "precio": 70720,
+  "fecha_inicio": "2015-01-17",
+  "fecha_fin": "2015-08-01",
+  "tickets_disponibles": 60,
+  "abierta": true,
+  "numInteresados": 14,
+  "flyer": "Goldenrod",
+  "categoriaId": 5
+}, {
+  "precio": 75493,
+  "fecha_inicio": "2014-06-20",
+  "fecha_fin": "2015-11-30",
+  "tickets_disponibles": 32,
+  "abierta": false,
+  "numInteresados": 12,
+  "flyer": "Yellow",
+  "categoriaId": 5
+}, {
+  "precio": 49005,
+  "fecha_inicio": "2014-06-02",
+  "fecha_fin": "2015-09-07",
+  "tickets_disponibles": 62,
+  "abierta": true,
+  "numInteresados": 19,
+  "flyer": "Turquoise",
+  "categoriaId": 1
+}, {
+  "precio": 58537,
+  "fecha_inicio": "2014-05-02",
+  "fecha_fin": "2015-07-02",
+  "tickets_disponibles": 86,
+  "abierta": true,
+  "numInteresados": 21,
+  "flyer": "Maroon",
+  "categoriaId": 4
+}, {
+  "precio": 10969,
+  "fecha_inicio": "2014-10-24",
+  "fecha_fin": "2016-01-09",
+  "tickets_disponibles": 48,
+  "abierta": false,
+  "numInteresados": 17,
+  "flyer": "Green",
+  "categoriaId": 1
+}, {
+  "precio": 71108,
+  "fecha_inicio": "2014-09-26",
+  "fecha_fin": "2016-02-28",
+  "tickets_disponibles": 56,
+  "abierta": false,
+  "numInteresados": 14,
+  "flyer": "Violet",
+  "categoriaId": 5
+}, {
+  "precio": 18402,
+  "fecha_inicio": "2014-06-15",
+  "fecha_fin": "2015-11-06",
+  "tickets_disponibles": 7,
+  "abierta": true,
+  "numInteresados": 13,
+  "flyer": "Teal",
+  "categoriaId": 1
+}, {
+  "precio": 49549,
+  "fecha_inicio": "2014-06-08",
+  "fecha_fin": "2015-12-12",
+  "tickets_disponibles": 6,
+  "abierta": false,
+  "numInteresados": 27,
+  "flyer": "Orange",
+  "categoriaId": 3
+}, {
+  "precio": 29079,
+  "fecha_inicio": "2014-12-24",
+  "fecha_fin": "2015-05-31",
+  "tickets_disponibles": 19,
+  "abierta": true,
+  "numInteresados": 6,
+  "flyer": "Indigo",
+  "categoriaId": 4
+}, {
+  "precio": 97326,
+  "fecha_inicio": "2014-10-10",
+  "fecha_fin": "2015-11-11",
+  "tickets_disponibles": 45,
+  "abierta": false,
+  "numInteresados": 13,
+  "flyer": "Orange",
+  "categoriaId": 2
+}, {
+  "precio": 83569,
+  "fecha_inicio": "2014-09-03",
+  "fecha_fin": "2015-10-17",
+  "tickets_disponibles": 34,
+  "abierta": true,
+  "numInteresados": 25,
+  "flyer": "Turquoise",
+  "categoriaId": 3
+}, {
+  "precio": 13338,
+  "fecha_inicio": "2014-08-18",
+  "fecha_fin": "2015-09-12",
+  "tickets_disponibles": 97,
+  "abierta": false,
+  "numInteresados": 5,
+  "flyer": "Goldenrod",
+  "categoriaId": 5
+}, {
+  "precio": 55967,
+  "fecha_inicio": "2015-02-24",
+  "fecha_fin": "2015-10-13",
+  "tickets_disponibles": 67,
+  "abierta": false,
+  "numInteresados": 10,
+  "flyer": "Indigo",
+  "categoriaId": 4
+}, {
+  "precio": 67781,
+  "fecha_inicio": "2015-02-01",
+  "fecha_fin": "2015-04-26",
+  "tickets_disponibles": 33,
+  "abierta": false,
+  "numInteresados": 26,
+  "flyer": "Crimson",
+  "categoriaId": 4
+}, {
+  "precio": 1273,
+  "fecha_inicio": "2014-05-13",
+  "fecha_fin": "2015-07-03",
+  "tickets_disponibles": 22,
+  "abierta": false,
+  "numInteresados": 22,
+  "flyer": "Orange",
+  "categoriaId": 1
+}, {
+  "precio": 41681,
+  "fecha_inicio": "2014-05-28",
+  "fecha_fin": "2015-12-01",
+  "tickets_disponibles": 82,
+  "abierta": true,
+  "numInteresados": 22,
+  "flyer": "Puce",
+  "categoriaId": 2
+}, {
+  "precio": 89960,
+  "fecha_inicio": "2014-12-22",
+  "fecha_fin": "2015-10-03",
+  "tickets_disponibles": 89,
+  "abierta": true,
+  "numInteresados": 18,
+  "flyer": "Indigo",
+  "categoriaId": 5
+}, {
+  "precio": 24693,
+  "fecha_inicio": "2014-08-05",
+  "fecha_fin": "2015-04-20",
+  "tickets_disponibles": 65,
+  "abierta": false,
+  "numInteresados": 27,
+  "flyer": "Turquoise",
+  "categoriaId": 3
+}, {
+  "precio": 85397,
+  "fecha_inicio": "2015-02-02",
+  "fecha_fin": "2015-10-03",
+  "tickets_disponibles": 20,
+  "abierta": false,
+  "numInteresados": 10,
+  "flyer": "Green",
+  "categoriaId": 3
+}, {
+  "precio": 42908,
+  "fecha_inicio": "2014-03-10",
+  "fecha_fin": "2015-04-09",
+  "tickets_disponibles": 32,
+  "abierta": false,
+  "numInteresados": 25,
+  "flyer": "Fuscia",
+  "categoriaId": 2
+}, {
+  "precio": 54663,
+  "fecha_inicio": "2014-12-06",
+  "fecha_fin": "2015-05-18",
+  "tickets_disponibles": 81,
+  "abierta": true,
+  "numInteresados": 29,
+  "flyer": "Aquamarine",
+  "categoriaId": 2
+}, {
+  "precio": 62012,
+  "fecha_inicio": "2014-04-08",
+  "fecha_fin": "2015-11-21",
+  "tickets_disponibles": 33,
+  "abierta": false,
+  "numInteresados": 23,
+  "flyer": "Crimson",
+  "categoriaId": 4
+}, {
+  "precio": 1666,
+  "fecha_inicio": "2015-01-03",
+  "fecha_fin": "2015-05-14",
+  "tickets_disponibles": 33,
+  "abierta": true,
+  "numInteresados": 17,
+  "flyer": "Blue",
+  "categoriaId": 1
+}, {
+  "precio": 13165,
+  "fecha_inicio": "2014-07-16",
+  "fecha_fin": "2015-03-08",
+  "tickets_disponibles": 85,
+  "abierta": false,
+  "numInteresados": 14,
+  "flyer": "Puce",
+  "categoriaId": 4
+}, {
+  "precio": 64754,
+  "fecha_inicio": "2014-11-30",
+  "fecha_fin": "2015-09-22",
+  "tickets_disponibles": 26,
+  "abierta": false,
+  "numInteresados": 11,
+  "flyer": "Crimson",
+  "categoriaId": 4
+}, {
+  "precio": 75108,
+  "fecha_inicio": "2014-08-26",
+  "fecha_fin": "2015-05-29",
+  "tickets_disponibles": 11,
+  "abierta": false,
+  "numInteresados": 1,
+  "flyer": "Teal",
+  "categoriaId": 1
+}, {
+  "precio": 10700,
+  "fecha_inicio": "2014-11-11",
+  "fecha_fin": "2015-08-05",
+  "tickets_disponibles": 25,
+  "abierta": false,
+  "numInteresados": 20,
+  "flyer": "Goldenrod",
+  "categoriaId": 3
+}, {
+  "precio": 30793,
+  "fecha_inicio": "2014-04-19",
+  "fecha_fin": "2015-08-06",
+  "tickets_disponibles": 89,
+  "abierta": false,
+  "numInteresados": 13,
+  "flyer": "Mauv",
+  "categoriaId": 4
+}, {
+  "precio": 53998,
+  "fecha_inicio": "2014-03-12",
+  "fecha_fin": "2015-12-02",
+  "tickets_disponibles": 11,
+  "abierta": false,
+  "numInteresados": 30,
+  "flyer": "Puce",
+  "categoriaId": 5
+}, {
+  "precio": 79475,
+  "fecha_inicio": "2014-12-10",
+  "fecha_fin": "2015-10-13",
+  "tickets_disponibles": 56,
+  "abierta": false,
+  "numInteresados": 20,
+  "flyer": "Indigo",
+  "categoriaId": 3
+}, {
+  "precio": 54924,
+  "fecha_inicio": "2014-12-31",
+  "fecha_fin": "2015-05-23",
+  "tickets_disponibles": 14,
+  "abierta": true,
+  "numInteresados": 15,
+  "flyer": "Violet",
+  "categoriaId": 4
+}, {
+  "precio": 22640,
+  "fecha_inicio": "2014-09-26",
+  "fecha_fin": "2015-08-28",
+  "tickets_disponibles": 95,
+  "abierta": false,
+  "numInteresados": 27,
+  "flyer": "Puce",
+  "categoriaId": 3
+}, {
+  "precio": 17560,
+  "fecha_inicio": "2014-10-28",
+  "fecha_fin": "2015-12-31",
+  "tickets_disponibles": 48,
+  "abierta": false,
+  "numInteresados": 25,
+  "flyer": "Aquamarine",
+  "categoriaId": 3
+}, {
+  "precio": 80887,
+  "fecha_inicio": "2015-02-17",
+  "fecha_fin": "2015-11-21",
+  "tickets_disponibles": 48,
+  "abierta": false,
+  "numInteresados": 25,
+  "flyer": "Fuscia",
+  "categoriaId": 5
+}, {
+  "precio": 51477,
+  "fecha_inicio": "2014-06-26",
+  "fecha_fin": "2015-05-29",
+  "tickets_disponibles": 90,
+  "abierta": false,
+  "numInteresados": 6,
+  "flyer": "Puce",
+  "categoriaId": 3
+}, {
+  "precio": 47521,
+  "fecha_inicio": "2014-10-28",
+  "fecha_fin": "2016-02-06",
+  "tickets_disponibles": 3,
+  "abierta": true,
+  "numInteresados": 24,
+  "flyer": "Green",
+  "categoriaId": 3
+}, {
+  "precio": 28686,
+  "fecha_inicio": "2014-08-29",
+  "fecha_fin": "2015-04-28",
+  "tickets_disponibles": 32,
+  "abierta": false,
+  "numInteresados": 16,
+  "flyer": "Yellow",
+  "categoriaId": 1
+}, {
+  "precio": 46767,
+  "fecha_inicio": "2015-02-16",
+  "fecha_fin": "2015-08-26",
+  "tickets_disponibles": 31,
+  "abierta": false,
+  "numInteresados": 17,
+  "flyer": "Teal",
+  "categoriaId": 2
+}, {
+  "precio": 91731,
+  "fecha_inicio": "2015-01-30",
+  "fecha_fin": "2015-07-15",
+  "tickets_disponibles": 26,
+  "abierta": false,
+  "numInteresados": 7,
+  "flyer": "Crimson",
+  "categoriaId": 3
+}, {
+  "precio": 81424,
+  "fecha_inicio": "2014-11-12",
+  "fecha_fin": "2015-11-06",
+  "tickets_disponibles": 3,
+  "abierta": false,
+  "numInteresados": 10,
+  "flyer": "Crimson",
+  "categoriaId": 4
+}, {
+  "precio": 48849,
+  "fecha_inicio": "2014-08-17",
+  "fecha_fin": "2015-05-20",
+  "tickets_disponibles": 1,
+  "abierta": false,
+  "numInteresados": 3,
+  "flyer": "Red",
+  "categoriaId": 4
+}, {
+  "precio": 23992,
+  "fecha_inicio": "2014-07-16",
+  "fecha_fin": "2015-11-26",
+  "tickets_disponibles": 41,
+  "abierta": true,
+  "numInteresados": 6,
+  "flyer": "Purple",
+  "categoriaId": 3
+}, {
+  "precio": 18558,
+  "fecha_inicio": "2014-05-09",
+  "fecha_fin": "2016-02-19",
+  "tickets_disponibles": 39,
+  "abierta": true,
+  "numInteresados": 1,
+  "flyer": "Violet",
+  "categoriaId": 3
+}, {
+  "precio": 43911,
+  "fecha_inicio": "2014-12-10",
+  "fecha_fin": "2015-09-30",
+  "tickets_disponibles": 57,
+  "abierta": true,
+  "numInteresados": 21,
+  "flyer": "Aquamarine",
+  "categoriaId": 1
+}, {
+  "precio": 2149,
+  "fecha_inicio": "2015-01-07",
+  "fecha_fin": "2016-02-10",
+  "tickets_disponibles": 72,
+  "abierta": true,
+  "numInteresados": 7,
+  "flyer": "Puce",
+  "categoriaId": 2
+}, {
+  "precio": 74686,
+  "fecha_inicio": "2014-04-20",
+  "fecha_fin": "2015-08-29",
+  "tickets_disponibles": 90,
+  "abierta": false,
+  "numInteresados": 11,
+  "flyer": "Fuscia",
+  "categoriaId": 5
+}, {
+  "precio": 33260,
+  "fecha_inicio": "2014-07-07",
+  "fecha_fin": "2015-05-12",
+  "tickets_disponibles": 2,
+  "abierta": true,
+  "numInteresados": 3,
+  "flyer": "Indigo",
+  "categoriaId": 4
+}, {
+  "precio": 19451,
+  "fecha_inicio": "2014-06-04",
+  "fecha_fin": "2015-11-28",
+  "tickets_disponibles": 7,
+  "abierta": true,
+  "numInteresados": 6,
+  "flyer": "Puce",
+  "categoriaId": 1
+}, {
+  "precio": 36684,
+  "fecha_inicio": "2014-05-08",
+  "fecha_fin": "2015-12-01",
+  "tickets_disponibles": 13,
+  "abierta": true,
+  "numInteresados": 24,
+  "flyer": "Red",
+  "categoriaId": 1
+}, {
+  "precio": 50321,
+  "fecha_inicio": "2014-07-26",
+  "fecha_fin": "2015-12-10",
+  "tickets_disponibles": 58,
+  "abierta": false,
+  "numInteresados": 27,
+  "flyer": "Maroon",
+  "categoriaId": 2
+}, {
+  "precio": 63290,
+  "fecha_inicio": "2015-01-15",
+  "fecha_fin": "2015-07-30",
+  "tickets_disponibles": 52,
+  "abierta": false,
+  "numInteresados": 22,
+  "flyer": "Green",
+  "categoriaId": 2
+}, {
+  "precio": 9489,
+  "fecha_inicio": "2014-06-13",
+  "fecha_fin": "2015-05-21",
+  "tickets_disponibles": 33,
+  "abierta": true,
+  "numInteresados": 16,
+  "flyer": "Yellow",
+  "categoriaId": 1
+}, {
+  "precio": 6727,
+  "fecha_inicio": "2014-05-21",
+  "fecha_fin": "2015-05-03",
+  "tickets_disponibles": 12,
+  "abierta": false,
+  "numInteresados": 28,
+  "flyer": "Teal",
+  "categoriaId": 4
+}, {
+  "precio": 89647,
+  "fecha_inicio": "2014-05-17",
+  "fecha_fin": "2016-02-01",
+  "tickets_disponibles": 84,
+  "abierta": false,
+  "numInteresados": 12,
+  "flyer": "Blue",
+  "categoriaId": 1
+}, {
+  "precio": 4666,
+  "fecha_inicio": "2014-05-29",
+  "fecha_fin": "2015-10-18",
+  "tickets_disponibles": 78,
+  "abierta": true,
+  "numInteresados": 3,
+  "flyer": "Orange",
+  "categoriaId": 3
+}, {
+  "precio": 62728,
+  "fecha_inicio": "2014-04-25",
+  "fecha_fin": "2015-10-25",
+  "tickets_disponibles": 97,
+  "abierta": true,
+  "numInteresados": 8,
+  "flyer": "Puce",
+  "categoriaId": 3
+}, {
+  "precio": 26748,
+  "fecha_inicio": "2014-06-26",
+  "fecha_fin": "2016-02-05",
+  "tickets_disponibles": 98,
+  "abierta": true,
+  "numInteresados": 6,
+  "flyer": "Aquamarine",
+  "categoriaId": 1
+}, {
+  "precio": 91529,
+  "fecha_inicio": "2014-06-19",
+  "fecha_fin": "2015-10-20",
+  "tickets_disponibles": 5,
+  "abierta": false,
+  "numInteresados": 8,
+  "flyer": "Purple",
+  "categoriaId": 2
+}, {
+  "precio": 10253,
+  "fecha_inicio": "2014-12-13",
+  "fecha_fin": "2015-05-05",
+  "tickets_disponibles": 75,
+  "abierta": false,
+  "numInteresados": 26,
+  "flyer": "Red",
+  "categoriaId": 3
+}, {
+  "precio": 2342,
+  "fecha_inicio": "2014-06-20",
+  "fecha_fin": "2016-02-27",
+  "tickets_disponibles": 1,
+  "abierta": true,
+  "numInteresados": 1,
+  "flyer": "Aquamarine",
+  "categoriaId": 5
+}, {
+  "precio": 36550,
+  "fecha_inicio": "2014-10-06",
+  "fecha_fin": "2015-11-30",
+  "tickets_disponibles": 33,
+  "abierta": false,
+  "numInteresados": 8,
+  "flyer": "Goldenrod",
+  "categoriaId": 2
+}, {
+  "precio": 73759,
+  "fecha_inicio": "2014-12-07",
+  "fecha_fin": "2015-03-28",
+  "tickets_disponibles": 77,
+  "abierta": true,
+  "numInteresados": 26,
+  "flyer": "Puce",
+  "categoriaId": 2
+}, {
+  "precio": 31071,
+  "fecha_inicio": "2014-03-19",
+  "fecha_fin": "2015-04-15",
+  "tickets_disponibles": 24,
+  "abierta": true,
+  "numInteresados": 13,
+  "flyer": "Yellow",
+  "categoriaId": 2
+}, {
+  "precio": 80589,
+  "fecha_inicio": "2014-12-05",
+  "fecha_fin": "2015-07-23",
+  "tickets_disponibles": 62,
+  "abierta": false,
+  "numInteresados": 9,
+  "flyer": "Goldenrod",
+  "categoriaId": 5
+}, {
+  "precio": 70434,
+  "fecha_inicio": "2014-04-26",
+  "fecha_fin": "2015-12-25",
+  "tickets_disponibles": 1,
+  "abierta": true,
+  "numInteresados": 21,
+  "flyer": "Blue",
+  "categoriaId": 5
+}, {
+  "precio": 39705,
+  "fecha_inicio": "2014-10-29",
+  "fecha_fin": "2015-03-30",
+  "tickets_disponibles": 11,
+  "abierta": true,
+  "numInteresados": 4,
+  "flyer": "Red",
+  "categoriaId": 1
+}, {
+  "precio": 72200,
+  "fecha_inicio": "2014-10-06",
+  "fecha_fin": "2015-12-02",
+  "tickets_disponibles": 12,
+  "abierta": true,
+  "numInteresados": 5,
+  "flyer": "Yellow",
+  "categoriaId": 3
+}, {
+  "precio": 15913,
+  "fecha_inicio": "2014-05-13",
+  "fecha_fin": "2015-04-15",
+  "tickets_disponibles": 98,
+  "abierta": false,
+  "numInteresados": 14,
+  "flyer": "Blue",
+  "categoriaId": 5
+}, {
+  "precio": 60653,
+  "fecha_inicio": "2015-01-15",
+  "fecha_fin": "2016-01-29",
+  "tickets_disponibles": 59,
+  "abierta": true,
+  "numInteresados": 15,
+  "flyer": "Fuscia",
+  "categoriaId": 1
+}, {
+  "precio": 80710,
+  "fecha_inicio": "2014-10-06",
+  "fecha_fin": "2015-07-28",
+  "tickets_disponibles": 45,
+  "abierta": true,
+  "numInteresados": 24,
+  "flyer": "Purple",
+  "categoriaId": 2
+}, {
+  "precio": 92227,
+  "fecha_inicio": "2014-09-13",
+  "fecha_fin": "2015-04-26",
+  "tickets_disponibles": 60,
+  "abierta": true,
+  "numInteresados": 20,
+  "flyer": "Fuscia",
+  "categoriaId": 1
+}, {
+  "precio": 27969,
+  "fecha_inicio": "2014-05-14",
+  "fecha_fin": "2015-12-07",
+  "tickets_disponibles": 39,
+  "abierta": false,
+  "numInteresados": 26,
+  "flyer": "Indigo",
+  "categoriaId": 2
+}, {
+  "precio": 47385,
+  "fecha_inicio": "2014-08-22",
+  "fecha_fin": "2015-10-28",
+  "tickets_disponibles": 52,
+  "abierta": true,
+  "numInteresados": 23,
+  "flyer": "Pink",
+  "categoriaId": 2
+}, {
+  "precio": 46352,
+  "fecha_inicio": "2014-09-28",
+  "fecha_fin": "2015-11-23",
+  "tickets_disponibles": 76,
+  "abierta": false,
+  "numInteresados": 17,
+  "flyer": "Maroon",
+  "categoriaId": 4
+}, {
+  "precio": 96578,
+  "fecha_inicio": "2015-02-10",
+  "fecha_fin": "2015-06-04",
+  "tickets_disponibles": 89,
+  "abierta": false,
+  "numInteresados": 10,
+  "flyer": "Indigo",
+  "categoriaId": 1
+}, {
+  "precio": 11114,
+  "fecha_inicio": "2014-07-13",
+  "fecha_fin": "2015-05-01",
+  "tickets_disponibles": 50,
+  "abierta": false,
+  "numInteresados": 27,
+  "flyer": "Turquoise",
+  "categoriaId": 5
+}, {
+  "precio": 9792,
+  "fecha_inicio": "2014-11-26",
+  "fecha_fin": "2015-11-30",
+  "tickets_disponibles": 99,
+  "abierta": true,
+  "numInteresados": 24,
+  "flyer": "Khaki",
+  "categoriaId": 1
+}, {
+  "precio": 27342,
+  "fecha_inicio": "2014-07-14",
+  "fecha_fin": "2015-10-04",
+  "tickets_disponibles": 56,
+  "abierta": false,
+  "numInteresados": 15,
+  "flyer": "Green",
+  "categoriaId": 2
+}, {
+  "precio": 20665,
+  "fecha_inicio": "2014-08-27",
+  "fecha_fin": "2015-10-31",
+  "tickets_disponibles": 41,
+  "abierta": false,
+  "numInteresados": 8,
+  "flyer": "Goldenrod",
+  "categoriaId": 3
+}, {
+  "precio": 45138,
+  "fecha_inicio": "2014-06-20",
+  "fecha_fin": "2015-12-15",
+  "tickets_disponibles": 36,
+  "abierta": true,
+  "numInteresados": 15,
+  "flyer": "Aquamarine",
+  "categoriaId": 4
+}, {
+  "precio": 19463,
+  "fecha_inicio": "2014-07-14",
+  "fecha_fin": "2015-08-01",
+  "tickets_disponibles": 31,
+  "abierta": false,
+  "numInteresados": 9,
+  "flyer": "Crimson",
+  "categoriaId": 1
+}, {
+  "precio": 48998,
+  "fecha_inicio": "2015-01-15",
+  "fecha_fin": "2015-09-20",
+  "tickets_disponibles": 40,
+  "abierta": false,
+  "numInteresados": 7,
+  "flyer": "Maroon",
+  "categoriaId": 2
+}, {
+  "precio": 26472,
+  "fecha_inicio": "2014-07-07",
+  "fecha_fin": "2015-08-20",
+  "tickets_disponibles": 100,
+  "abierta": true,
+  "numInteresados": 15,
+  "flyer": "Khaki",
+  "categoriaId": 1
+}, {
+  "precio": 15626,
+  "fecha_inicio": "2014-09-24",
+  "fecha_fin": "2015-03-10",
+  "tickets_disponibles": 76,
+  "abierta": false,
+  "numInteresados": 5,
+  "flyer": "Crimson",
+  "categoriaId": 5
+}, {
+  "precio": 52217,
+  "fecha_inicio": "2014-06-23",
+  "fecha_fin": "2015-10-01",
+  "tickets_disponibles": 98,
+  "abierta": true,
+  "numInteresados": 29,
+  "flyer": "Maroon",
+  "categoriaId": 1
+}, {
+  "precio": 30983,
+  "fecha_inicio": "2014-10-23",
+  "fecha_fin": "2016-01-30",
+  "tickets_disponibles": 77,
+  "abierta": false,
+  "numInteresados": 26,
+  "flyer": "Maroon",
+  "categoriaId": 4
+}]
+	  		 , function(){} );
 	  	if(err) throw err;
 	  });
 
 	  ds.automigrate( 'Cliente' , function( err ) {
+	  	app.models.Cliente.create(  
+[{
+  "no_id": 1,
+  "genero": "F",
+  "nombre": "Beverly Elliott",
+  "email": "belliott0@eepurl.com",
+  "edad": 22,
+  "tokenTC": "1DKBsrXvibGUVeR557o79fbBK9zF9AH4pz",
+  "password": "rFzfWtZiHoK",
+  "username": "belliott0"
+}, {
+  "no_id": 2,
+  "genero": "F",
+  "nombre": "Jessica Cunningham",
+  "email": "jcunningham1@yale.edu",
+  "edad": 47,
+  "tokenTC": "1NAo8Ek6oTpTxTVG4U29BbBUY7y7o3bLJA",
+  "password": "Hxpj280pw6",
+  "username": "jcunningham1"
+}, {
+  "no_id": 3,
+  "genero": "M",
+  "nombre": "Eugene Hudson",
+  "email": "ehudson2@typepad.com",
+  "edad": 34,
+  "tokenTC": "1GKXv12fxLjHnst4HtUqjEkkpztUXZfs12",
+  "password": "Qd3IW9e8SVpd",
+  "username": "ehudson2"
+}, {
+  "no_id": 4,
+  "genero": "M",
+  "nombre": "Steve Gibson",
+  "email": "sgibson3@canalblog.com",
+  "edad": 34,
+  "tokenTC": "1NvT8C3nZ5Fnv92ahjvd1HYDCDNhcXGBXE",
+  "password": "hKc3f5uX0sYE",
+  "username": "sgibson3"
+}, {
+  "no_id": 5,
+  "genero": "F",
+  "nombre": "Christine Spencer",
+  "email": "cspencer4@senate.gov",
+  "edad": 50,
+  "tokenTC": "15imjQKkBitA1byDx7uFkavykWF9Hm8CWL",
+  "password": "cshRoxhbR",
+  "username": "cspencer4"
+}, {
+  "no_id": 6,
+  "genero": "F",
+  "nombre": "Denise Bowman",
+  "email": "dbowman5@usnews.com",
+  "edad": 30,
+  "tokenTC": "1NbyrN3C8xfTBhiQ1t59epXDrbc7zBQokc",
+  "password": "w8Kdqp2",
+  "username": "dbowman5"
+}, {
+  "no_id": 7,
+  "genero": "F",
+  "nombre": "Tammy Duncan",
+  "email": "tduncan6@google.ca",
+  "edad": 24,
+  "tokenTC": "1KruaMwh334ToAS65QGJQ6wBAHcQUtuXY2",
+  "password": "Hsxhl7Emxu",
+  "username": "tduncan6"
+}, {
+  "no_id": 8,
+  "genero": "F",
+  "nombre": "Jacqueline Hall",
+  "email": "jhall7@meetup.com",
+  "edad": 25,
+  "tokenTC": "13ove4G7pmifG5Yu6qEkDZn7ezvv5X9hKx",
+  "password": "hHh9plW80k",
+  "username": "jhall7"
+}, {
+  "no_id": 9,
+  "genero": "F",
+  "nombre": "Betty Marshall",
+  "email": "bmarshall8@discuz.net",
+  "edad": 48,
+  "tokenTC": "1E1taRam4BUcvWfsb1qKCGDnSb3ByekPiy",
+  "password": "KkQ8kXDROGU",
+  "username": "bmarshall8"
+}, {
+  "no_id": 10,
+  "genero": "F",
+  "nombre": "Ruby Simmons",
+  "email": "rsimmons9@vistaprint.com",
+  "edad": 22,
+  "tokenTC": "1JMYHxKo1v7h5jHS1g6FC1ozZdSgqv1Wbf",
+  "password": "ypUAhvo6",
+  "username": "rsimmons9"
+}, {
+  "no_id": 11,
+  "genero": "F",
+  "nombre": "Joan Stone",
+  "email": "jstonea@cbsnews.com",
+  "edad": 20,
+  "tokenTC": "1GoGuSjoRADReNyBPhLydDkwDi6bnUBf6j",
+  "password": "gINZI0M",
+  "username": "jstonea"
+}, {
+  "no_id": 12,
+  "genero": "M",
+  "nombre": "Harry Green",
+  "email": "hgreenb@hhs.gov",
+  "edad": 27,
+  "tokenTC": "19i6275gAxYXcoWQW8hxWPfasqyAWquFes",
+  "password": "baB7LBiutEi9",
+  "username": "hgreenb"
+}, {
+  "no_id": 13,
+  "genero": "F",
+  "nombre": "Pamela Moreno",
+  "email": "pmorenoc@unesco.org",
+  "edad": 40,
+  "tokenTC": "1bfdi6TU7UsYyfY9cbxcNaW1kxfesLCEG",
+  "password": "qGTbDFUDS",
+  "username": "pmorenoc"
+}, {
+  "no_id": 14,
+  "genero": "M",
+  "nombre": "Carlos Sims",
+  "email": "csimsd@artisteer.com",
+  "edad": 27,
+  "tokenTC": "1N52h7rF83XTQu5W4fmQQwDuKcFKtLc7Hp",
+  "password": "pZAR3G",
+  "username": "csimsd"
+}, {
+  "no_id": 15,
+  "genero": "F",
+  "nombre": "Rose Rivera",
+  "email": "rriverae@desdev.cn",
+  "edad": 40,
+  "tokenTC": "16RoT21MkFPkhriKvQqXD83FnDCJVzYXMh",
+  "password": "bMQudFNnqrf",
+  "username": "rriverae"
+}, {
+  "no_id": 16,
+  "genero": "F",
+  "nombre": "Doris Williamson",
+  "email": "dwilliamsonf@squarespace.com",
+  "edad": 29,
+  "tokenTC": "1Ck7N3aGYfTM8H8wEFBB4Tob4DjYZ7y5yP",
+  "password": "w7Nbldn",
+  "username": "dwilliamsonf"
+}, {
+  "no_id": 17,
+  "genero": "F",
+  "nombre": "Christine Bell",
+  "email": "cbellg@ameblo.jp",
+  "edad": 27,
+  "tokenTC": "1ECVA33dpiAYy2FTfBwc8cSpc8v2kWHomM",
+  "password": "7m1VqhNUHHO",
+  "username": "cbellg"
+}, {
+  "no_id": 18,
+  "genero": "F",
+  "nombre": "Ashley Simmons",
+  "email": "asimmonsh@dot.gov",
+  "edad": 39,
+  "tokenTC": "1LMpRCnQTZrHt7agfKxFodAC3cMpfbE7eV",
+  "password": "aWAuEZ4bOrVM",
+  "username": "asimmonsh"
+}, {
+  "no_id": 19,
+  "genero": "F",
+  "nombre": "Sara Moore",
+  "email": "smoorei@opensource.org",
+  "edad": 47,
+  "tokenTC": "15tuqAfwyiiFAYkHBgVY6FMw6HRPvzbqgX",
+  "password": "M7IoLPTK",
+  "username": "smoorei"
+}, {
+  "no_id": 20,
+  "genero": "F",
+  "nombre": "Judith Johnson",
+  "email": "jjohnsonj@people.com.cn",
+  "edad": 21,
+  "tokenTC": "18kVm7NXZt9EJ4Vj8K51rbxYFWjHrpd7qV",
+  "password": "8eY8xkLvy78",
+  "username": "jjohnsonj"
+}]
+	  	, function(err){ if (err) throw err } );
 	  	if(err) throw err;
 	  });
 
