@@ -32,6 +32,7 @@
     },
     "flyer": {
       "type": "string",
+      "length":10240 ,
       "required": true
     }
   },
