@@ -14,7 +14,7 @@
     ]
   },
   "User": {
-    "dataSource": "db"
+    "dataSource": "mypgsql"
   },
   "AccessToken": {
     "dataSource": "db",
@@ -41,6 +41,14 @@
     "public": true
   },
   "Categoria": {
+    "dataSource": "mypgsql",
+    "public": true
+  },
+  "Ticket": {
+    "dataSource": "mypgsql",
+    "public": true
+  },
+  "Lugar": {
     "dataSource": "mypgsql",
     "public": true
   }

@@ -1,6 +1,6 @@
 {
-  "name": "Categoria",
-  "plural": "categorias",
+  "name": "Lugar",
+  "plural": "lugares",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
@@ -10,6 +10,16 @@
     "nombre": {
       "type": "string",
       "required": true
+    },
+    "direccion": {
+      "type": "string"
+    },
+    "horarios": {
+      "type": "string",
+      "required": true
+    },
+    "likes": {
+      "type": "number"
     }
   },
   "validations": [],

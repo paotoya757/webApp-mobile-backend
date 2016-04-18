@@ -1,54 +1,35 @@
 {
-  "name": "Oferta",
-  "plural": "ofertas",
+  "name": "Ticket",
+  "plural": "tickets",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "precio": {
+    "costoTotal": {
       "type": "number",
       "required": true
     },
-    "fecha_inicio": {
-      "type": "date",
-      "required": true
-    },
-    "fecha_final": {
-      "type": "date"
-    },
-    "tickets_disponibles": {
+    "numPersonas": {
       "type": "number",
       "required": true
     },
-    "abierta": {
+    "validado": {
       "type": "boolean",
-      "required": true
-    },
-    "numInteresados": {
-      "type": "number",
-      "required": true
-    },
-    "flyer": {
-      "type": "string",
       "required": true
     }
   },
   "validations": [],
   "relations": {
-    "tickets": {
-      "type": "hasMany",
-      "model": "Ticket"
-    },
-    "categoria": {
+    "cliente": {
       "type": "belongsTo",
-      "model": "Categoria",
+      "model": "Cliente",
       "foreignKey": ""
     },
-    "lugar": {
+    "oferta": {
       "type": "belongsTo",
-      "model": "Lugar",
+      "model": "Oferta",
       "foreignKey": ""
     }
   },

@@ -15,13 +15,9 @@
       "type": "string",
       "required": true
     },
-    "edad": {
-      "type": "number",
-      "required": true
-    },
     "tokenTC": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "genero": {
       "type": "string",
@@ -29,7 +25,33 @@
     }
   },
   "validations": [],
-  "relations": {},
-  "acls": [],
+  "relations": {
+    "tickets": {
+      "type": "hasMany",
+      "model": "Ticket"
+    }
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW",
+      "property": "login"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW",
+      "property": "create"
+    }
+  ],
   "methods": {}
 }

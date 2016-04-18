@@ -4,8 +4,13 @@
     "connector": "memory"
   },
   "mypgsql": {
-    "url": "postgres://uelaufqfduxkxb:uHsLj0sRQL_Vvd0r4cvV4tliXC@ec2-54-83-198-159.compute-1.amazonaws.com:5432/daod8a1j3rr4po?ssl=true",
+    "url": "postgres://postgres:caracoli@127.0.0.1:5432/tickitup",
     "name": "mypgsql",
+    "connector": "postgresql"
+  },
+  "mypgsql-prod": {
+    "url": "postgres://uelaufqfduxkxb:uHsLj0sRQL_Vvd0r4cvV4tliXC@ec2-54-83-198-159.compute-1.amazonaws.com:5432/daod8a1j3rr4po?ssl=true",
+    "name": "mypgsql-prod",
     "connector": "postgresql"
   }
 }

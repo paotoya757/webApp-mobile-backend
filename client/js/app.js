@@ -8,24 +8,23 @@
  *
  * Main module of the application.
  */
-var conferenceApp = angular
-  .module('LugarWebApp', [
+var app = angular
+  .module('WebAppLugar', [
     'ngResource',
     'ngRoute',
     'firebase'
   ])
-  .config(function ($routeProvider) {
-    $routeProvider
-
-      .when('/ofertas', {
-        templateUrl: 'views/conferences-home.html',
-        controller: 'ofertasController',
-        controllerAs: 'ofertasController'
-      })
-      .otherwise({
-        redirectTo: '/ofertas'
-      });
-  })
+  .config(
+    function ($routeProvider) {
+      $routeProvider
+        .when('/ofertas', {
+          templateUrl: 'views/ofertas.html',
+          controller: 'ofertasCtrl'
+        })
+        .otherwise({
+          redirectTo: '/ofertas'
+        });
+    })
   ;
 
 
